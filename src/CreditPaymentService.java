@@ -3,8 +3,9 @@ public class CreditPaymentService {
         double payment;
 
         if (loanPeriod >= 12) {
-            interestRate = 9.99 / 12 / 100;
+            interestRate = interestRate / 12 / 100;
         }
+
         payment = amountCredit * (interestRate * Math.pow((1 + interestRate), loanPeriod) / (Math.pow((1 + interestRate), loanPeriod) - 1));
         return (int) payment;
     }
