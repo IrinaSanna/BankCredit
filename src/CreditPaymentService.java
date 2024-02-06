@@ -2,7 +2,7 @@ public class CreditPaymentService {
     public int calculate(int amountCredit, int loanPeriod, double interestRate) {
         double payment;
 
-        if (loanPeriod >= 12) {
+        if (loanPeriod >= 6) {
             interestRate = interestRate / 12 / 100;
         }
 
